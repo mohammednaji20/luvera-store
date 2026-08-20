@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Luvéra | Beauty • Care • Confidence</title>
+
+  <meta
+    name="description"
+    content="Luvéra — فرشاة سيليكون للعناية وتدليك فروة الرأس. اطلب الآن عبر WhatsApp."
+  >
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+  <meta name="theme-color" content="#d66b8b">
+
+  <style>
+    :root {
+      --pink: #d66b8b;
+      --pink-dark: #b94f70;
+      --pink-light: #fff3f6;
+      --black: #171717;
+      --gray: #6d6d6d;
+      --light: #f8f8f8;
+      --border: #eeeeee;
+      --green: #25d366;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      color: var(--black);
+      background: white;
+      line-height: 1.7;
+      overflow-x: hidden;
+      padding-bottom: 78px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    /* TOP BAR */
+
+    .top-bar {
+      background: var(--black);
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+      height: 72px;
+      padding: 0 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 30px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: var(--pink);
+    }
+
+    .nav-button {
+      background: var(--pink);
+      color: white;
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .nav-button:hover {
+      background: var(--pink-dark);
+      transform: translateY(-2px);
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 60px 6% 75px;
+      background:
+        radial-gradient(circle at 10% 10%, #ffe1ea, transparent 35%),
+        linear-gradient(135deg, #fff8fa, white);
+    }
+
+    .hero-container {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .product-box {
+      position: relative;
+    }
+
+    .product-image {
+      height: 560px;
+      border-radius: 30px;
+      overflow: hidden;
+      background: #f4dce3;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .offer-badge {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: white;
+      color: var(--pink-dark);
+      padding: 9px 15px;
+      border-radius: 30px;
+      font-weight: bold;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+    }
+
+    .stars {
+      color: #f3a51d;
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
+
+    .stars span {
+      color: var(--gray);
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: var(--pink);
+    }
+
+    .hero-description {
+      color: var(--gray);
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .benefits {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    .benefits li {
+      margin: 8px 0;
+    }
+
+    .benefits li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: bold;
+      margin-left: 9px;
+    }
+
+    /* PRICE */
+
+    .price-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      margin-bottom: 15px;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .old-price {
+      color: #aaa;
+      text-decoration: line-through;
+      font-size: 16px;
+    }
+
+    .price {
+      color: var(--pink);
+      font-size: 38px;
+      font-weight: 900;
+    }
+
+    .discount {
+      background: #ffe5ed;
+      color: var(--pink-dark);
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    /* WHATSAPP BUTTON */
+
+    .whatsapp-button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      background: var(--green);
+      color: white;
+      padding: 17px;
+      border-radius: 14px;
+      font-size: 18px;
+      font-weight: 900;
+      transition: 0.2s;
+    }
+
+    .whatsapp-button:hover {
+      transform: translateY(-2px);
+      filter: brightness(0.95);
+    }
+
+    .small-note {
+      text-align: center;
+      color: #888;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    /* TRUST */
+
+    .trust {
+      max-width: 1000px;
+      margin: 35px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .trust-box {
+      text-align: center;
+      padding: 15px 8px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: white;
+    }
+
+    .trust-icon {
+      font-size: 25px;
+    }
+
+    .trust-box strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .trust-box small {
+      color: #888;
+      font-size: 10px;
+    }
+
+    /* GENERAL */
+
+    section {
+      padding: 80px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .section-description {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      color: var(--gray);
+    }
+
+    /* VIDEO */
+
+    .video-container {
+      max-width: 850px;
+      height: 480px;
+      margin: auto;
+      background: #111;
+      border-radius: 25px;
+      overflow: hidden;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* DARK SECTION */
+
+    .dark-section {
+      background: var(--black);
+      color: white;
+      text-align: center;
+    }
+
+    .dark-section .section-description {
+      color: #ccc;
+    }
+
+    .features-dark {
+      max-width: 1050px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .dark-card {
+      background: #222;
+      padding: 30px 20px;
+      border-radius: 20px;
+    }
+
+    .dark-card .icon {
+      font-size: 35px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .dark-card p {
+      color: #bbb;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    /* FEATURES */
+
+    .pink-section {
+      background: var(--pink-light);
+    }
+
+    .features {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 25px 15px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    }
+
+    .feature-card .icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .feature-card p {
+      color: var(--gray);
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    /* STEPS */
+
+    .steps {
+      max-width: 900px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .step {
+      text-align: center;
+    }
+
+    .number {
+      width: 60px;
+      height: 60px;
+      margin: auto auto 15px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--pink);
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .step p {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    /* OFFER */
+
+    .offer-section {
+      background: linear-gradient(135deg, #fff0f4, white);
+      text-align: center;
+    }
+
+    .offer-box {
+      max-width: 650px;
+      margin: 35px auto 0;
+      background: white;
+      border-radius: 25px;
+      padding: 35px 25px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    }
+
+    .offer-label {
+      display: inline-block;
+      background: var(--black);
+      color: white;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    .offer-box h3 {
+      margin-top: 15px;
+      font-size: 25px;
+    }
+
+    .offer-price {
+      color: var(--pink);
+      font-size: 44px;
+      font-weight: 900;
+      margin: 10px;
+    }
+
+    .offer-list {
+      list-style: none;
+      text-align: right;
+      margin: 20px 0;
+    }
+
+    .offer-list li {
+      margin: 8px 0;
+    }
+
+    .offer-list li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: bold;
+      margin-left: 8px;
+    }
+
+    /* REVIEWS */
+
+    .reviews {
+      max-width: 1050px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .review {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 25px;
+    }
+
+    .review-stars {
+      color: #f3a51d;
+      margin-bottom: 10px;
+    }
+
+    .review p {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .review small {
+      color: #999;
+      display: block;
+      margin-top: 12px;
+    }
+
+    /* FAQ */
+
+    .faq-section {
+      background: #fafafa;
+    }
+
+    .faq {
+      max-width: 800px;
+      margin: 35px auto 0;
+    }
+
+    details {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 17px 20px;
+      margin-bottom: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    details p {
+      color: var(--gray);
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    /* FINAL CTA */
+
+    .final-cta {
+      background: var(--pink);
+      color: white;
+      text-align: center;
+    }
+
+    .final-cta p {
+      margin: 10px 0 25px;
+    }
+
+    .final-cta .whatsapp-button {
+      max-width: 450px;
+      margin: auto;
+      background: white;
+      color: #159447;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 30px 15px;
+      font-size: 12px;
+    }
+
+    /* MOBILE STICKY */
+
+    .mobile-buy {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 75px;
+      background: white;
+      border-top: 1px solid #ddd;
+      z-index: 9999;
+      padding: 8px 10px;
+      gap: 10px;
+      box-shadow: 0 -5px 25px rgba(0,0,0,0.12);
+    }
+
+    .mobile-price {
+      width: 85px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1.2;
+    }
+
+    .mobile-price small {
+      color: #999;
+      text-decoration: line-through;
+      font-size: 10px;
+    }
+
+    .mobile-price strong {
+      color: var(--pink);
+      font-size: 20px;
+    }
+
+    .mobile-buy a {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--green);
+      color: white;
+      border-radius: 12px;
+      font-weight: 900;
+      font-size: 17px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+
+      body {
+        padding-bottom: 75px;
+      }
+
+      .navbar {
+        padding: 0 16px;
+      }
+
+      .nav-button {
+        display: none;
+      }
+
+      .hero {
+        padding: 30px 15px 50px;
+      }
+
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .product-image {
+        height: 410px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .trust {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      section {
+        padding: 60px 18px;
+      }
+
+      .section-title {
+        font-size: 29px;
+      }
+
+      .video-container {
+        height: 390px;
+      }
+
+      .features-dark,
+      .steps,
+      .reviews {
+        grid-template-columns: 1fr;
+      }
+
+      .features {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .mobile-buy {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .logo {
+        font-size: 26px;
+      }
+
+      .product-image {
+        height: 350px;
+        border-radius: 20px;
+      }
+
+      h1 {
+        font-size: 31px;
+      }
+
+      .price {
+        font-size: 34px;
+      }
+
+      .trust-box {
+        padding: 10px 4px;
+      }
+
+      .trust-box strong {
+        font-size: 10px;
+      }
+
+      .trust-box small {
+        font-size: 8px;
+      }
+
+      .features {
+        gap: 9px;
+      }
+
+      .feature-card {
+        padding: 18px 8px;
+      }
+
+      .feature-card h3 {
+        font-size: 14px;
+      }
+
+      .feature-card p {
+        font-size: 11px;
+      }
+
+      .video-container {
+        height: 330px;
+      }
+
+      .offer-box {
+        padding: 28px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    🚚 شحن للسعودية 🇸🇦 والإمارات 🇦🇪
+  </div>
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="logo">
+      Luv<span>éra</span>
+    </div>
+
+    <a
+      href="https://wa.me/message/X3AUMIZVL3SGM1"
+      target="_blank"
+      rel="noopener"
+      class="nav-button"
+    >
+      اطلب عبر WhatsApp
+    </a>
+
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-container">
+
+      <!-- PRODUCT IMAGE -->
+      <div class="product-box">
+
+        <div class="offer-badge">
+          🔥 عرض الإطلاق
+        </div>
+
+        <div class="product-image">
+
+          <!--
+            ضع الصورة الرئيسية هنا:
+            images/product-main.jpg
+          -->
+
+          <img
+            src="images/product-main.jpg"
+            alt="فرشاة Luvéra للعناية بفروة الرأس"
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- HERO CONTENT -->
+      <div>
+
+        <div class="stars">
+          ★★★★★
+          <span>
+            4.7/5 — تقييمات المنتج من المصدر
+          </span>
+        </div>
+
+        <h1>
+          عناية أسهل لفروة رأسك
+          <span>في روتينك اليومي</span>
+        </h1>
+
+        <p class="hero-description">
+          فرشاة سيليكون عملية لتدليك فروة الرأس
+          والمساعدة على توزيع الشامبو أو الزيوت بسهولة.
+        </p>
+
+
+        <ul class="benefits">
+
+          <li>
+            سيليكون مرن ومريح
+          </li>
+
+          <li>
+            مناسبة للشامبو والزيوت
+          </li>
+
+          <li>
+            للاستخدام الرطب والجاف
+          </li>
+
+          <li>
+            سهلة التنظيف والحمل
+          </li>
+
+        </ul>
+
+
+        <!-- PRICE -->
+        <div class="price-card">
+
+          <div class="price-row">
+
+            <span class="old-price">
+              89 ر.س
+            </span>
+
+            <span class="price">
+              69 ر.س
+            </span>
+
+            <span class="discount">
+              عرض الإطلاق
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- WHATSAPP -->
+        <a
+          href="https://wa.me/message/X3AUMIZVL3SGM1"
+          target="_blank"
+          rel="noopener"
+          class="whatsapp-button"
+        >
+          🟢 اطلب الآن عبر WhatsApp
+        </a>
+
+        <p class="small-note">
+          🇸🇦 السعودية &nbsp; | &nbsp; 🇦🇪 الإمارات
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- TRUST -->
+    <div class="trust">
+
+      <div class="trust-box">
+        <div class="trust-icon">🚚</div>
+        <strong>شحن للسعودية والإمارات</strong>
+        <small>حسب الخيار المتاح</small>
+      </div>
+
+      <div class="trust-box">
+        <div class="trust-icon">⭐</div>
+        <strong>4.7 / 5</strong>
+        <small>تقييمات المنتج من المصدر</small>
+      </div>
+
+      <div class="trust-box">
+        <div class="trust-icon">💬</div>
+        <strong>الطلب عبر WhatsApp</strong>
+        <small>تواصل مباشر</small>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- VIDEO -->
+  <section>
+
+    <h2 class="section-title">
+      شاهد طريقة الاستخدام
+    </h2>
+
+    <p class="section-description">
+      فيديو قصير يوضح طريقة استخدام الفرشاة
+      مع الشامبو أو الزيوت.
+    </p>
+
+    <div class="video-container">
+
+      <!--
+        ضع الفيديو هنا:
+        videos/product-video.mp4
+      -->
+
+      <video
+        controls
+        poster="images/video-cover.jpg"
+      >
+
+        <source
+          src="videos/product-video.mp4"
+          type="video/mp4"
+        >
+
+        متصفحك لا يدعم تشغيل الفيديو.
+
+      </video>
+
+    </div>
+
+  </section>
+
+
+  <!-- DARK FEATURES -->
+  <section class="dark-section">
+
+    <h2 class="section-title">
+      روتين أبسط. تجربة أفضل.
+    </h2>
+
+    <p class="section-description">
+      أداة عملية تجمع بين التوزيع والتدليك
+      ضمن روتين العناية بالشعر.
+    </p>
+
+
+    <div class="features-dark">
+
+      <div class="dark-card">
+
+        <span class="icon">🧴</span>
+
+        <h3>
+          توزيع أسهل
+        </h3>
+
+        <p>
+          تساعد على توزيع الشامبو أو الزيت
+          على فروة الرأس.
+        </p>
+
+      </div>
+
+
+      <div class="dark-card">
+
+        <span class="icon">💆</span>
+
+        <h3>
+          تدليك لطيف
+        </h3>
+
+        <p>
+          استخدمها بحركات دائرية لطيفة
+          أثناء روتينك.
+        </p>
+
+      </div>
+
+
+      <div class="dark-card">
+
+        <span class="icon">🚿</span>
+
+        <h3>
+          مناسبة للاستحمام
+        </h3>
+
+        <p>
+          يمكن استخدامها أثناء غسل الشعر
+          ثم تنظيفها بسهولة.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURES -->
+  <section class="pink-section">
+
+    <h2 class="section-title">
+      لماذا Luvéra؟
+    </h2>
+
+    <p class="section-description">
+      بسيطة، عملية، ومناسبة للاستخدام اليومي.
+    </p>
+
+
+    <div class="features">
+
+      <div class="feature-card">
+
+        <div class="icon">🧴</div>
+
+        <h3>
+          مع الشامبو
+        </h3>
+
+        <p>
+          للمساعدة على توزيع الشامبو أثناء الغسل.
+        </p>
+
+      </div>
+
+
+      <div class="feature-card">
+
+        <div class="icon">✨</div>
+
+        <h3>
+          مع الزيوت
+        </h3>
+
+        <p>
+          للمساعدة على توزيع كمية مناسبة من الزيت.
+        </p>
+
+      </div>
+
+
+      <div class="feature-card">
+
+        <div class="icon">💆</div>
+
+        <h3>
+          سيليكون مرن
+        </h3>
+
+        <p>
+          لتجربة تدليك مريحة عند الاستخدام بلطف.
+        </p>
+
+      </div>
+
+
+      <div class="feature-card">
+
+        <div class="icon">🎒</div>
+
+        <h3>
+          سهلة الحمل
+        </h3>
+
+        <p>
+          حجم عملي للمنزل والسفر.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HOW TO USE -->
+  <section>
+
+    <h2 class="section-title">
+      طريقة الاستخدام
+    </h2>
+
+
+    <div class="steps">
+
+      <div class="step">
+
+        <div class="number">
+          1
+        </div>
+
+        <h3>
+          ضع المنتج
+        </h3>
+
+        <p>
+          ضع كمية مناسبة من الشامبو أو الزيت.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="number">
+          2
+        </div>
+
+        <h3>
+          دلّك بلطف
+        </h3>
+
+        <p>
+          حرّك الفرشاة بحركات دائرية لطيفة.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="number">
+          3
+        </div>
+
+        <h3>
+          نظّفها
+        </h3>
+
+        <p>
+          اشطف الفرشاة بالماء بعد الاستخدام.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- OFFER -->
+  <section class="offer-section">
+
+    <h2 class="section-title">
+      اختر عرضك
+    </h2>
+
+    <p class="section-description">
+      راسلنا على WhatsApp لإتمام الطلب
+      وتأكيد الدولة والكمية.
+    </p>
+
+
+    <div class="offer-box">
+
+      <span class="offer-label">
+        🔥 العرض المميز
+      </span>
+
+      <h3>
+        قطعتان للعناية بفروة الرأس
+      </h3>
+
+      <div class="offer-price">
+        99 ر.س
+      </div>
+
+      <ul class="offer-list">
+
+        <li>
+          قطعتان
+        </li>
+
+        <li>
+          مناسبة للشامبو والزيوت
+        </li>
+
+        <li>
+          سيليكون مرن
+        </li>
+
+        <li>
+          مناسبة للاستخدام الرطب
+        </li>
+
+      </ul>
+
+
+      <a
+        href="https://wa.me/message/X3AUMIZVL3SGM1"
+        target="_blank"
+        rel="noopener"
+        class="whatsapp-button"
+      >
+        💬 أريد هذا العرض
+      </a>
+
+      <p class="small-note">
+        للإمارات: السعر المستهدف للعرض 79 د.إ
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- REVIEWS -->
+  <section>
+
+    <h2 class="section-title">
+      تقييمات المنتج
+    </h2>
+
+    <p class="section-description">
+      مقتطفات من تقييمات مشتريات مؤكدة على المصدر.
+    </p>
+
+
+    <div class="reviews">
+
+      <div class="review">
+
+        <div class="review-stars">
+          ★★★★★
+        </div>
+
+        <p>
+          "يوزع المنتجات جيدًا بمجرد وضعها في الزجاجة،
+          وفرشاة التدليك ممتعة حقًا."
+        </p>
+
+        <small>
+          مشتري موثّق
+        </small>
+
+      </div>
+
+
+      <div class="review">
+
+        <div class="review-stars">
+          ★★★★★
+        </div>
+
+        <p>
+          "اشتريتها لزيوت الشعر وأوصي بها
+          لأنها تعمل بشكل جيد مع الشعر."
+        </p>
+
+        <small>
+          مشتري موثّق
+        </small>
+
+      </div>
+
+
+      <div class="review">
+
+        <div class="review-stars">
+          ★★★★★
+        </div>
+
+        <p>
+          "السيليكون مريح والفرشاة سهلة الاستخدام."
+        </p>
+
+        <small>
+          مشتري موثّق
+        </small>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="faq-section">
+
+    <h2 class="section-title">
+      الأسئلة الشائعة
+    </h2>
+
+
+    <div class="faq">
+
+      <details>
+
+        <summary>
+          هل يمكن استخدامها مع الشامبو؟
+        </summary>
+
+        <p>
+          نعم، يمكن استخدامها أثناء غسل الشعر
+          للمساعدة على توزيع الشامبو وتدليك فروة الرأس بلطف.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          هل يمكن استخدامها مع الزيوت؟
+        </summary>
+
+        <p>
+          نعم، يمكن استخدامها مع كمية مناسبة
+          من زيت الشعر للمساعدة في توزيعه.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          هل هي مناسبة للاستخدام الرطب؟
+        </summary>
+
+        <p>
+          نعم، يمكن استخدامها أثناء الاستحمام،
+          ثم شطفها وتنظيفها بعد الاستخدام.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          هل هي منتج طبي؟
+        </summary>
+
+        <p>
+          لا. المنتج أداة للعناية الشخصية وليس منتجًا طبيًا
+          ولا يُستخدم لتشخيص أو علاج أي حالة صحية.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          كيف أطلب؟
+        </summary>
+
+        <p>
+          اضغط على أي زر WhatsApp في الصفحة،
+          وأرسل طلبك، ثم نؤكد معك الدولة والكمية والتفاصيل.
+        </p>
+
+      </details>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+
+    <h2>
+      جاهز لتجربة روتين عناية أسهل؟
+    </h2>
+
+    <p>
+      ابدأ بخطوة بسيطة مع Luvéra.
+    </p>
+
+
+    <a
+      href="https://wa.me/message/X3AUMIZVL3SGM1"
+      target="_blank"
+      rel="noopener"
+      class="whatsapp-button"
+    >
+      🟢 اطلب الآن عبر WhatsApp
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    © 2026 Luvéra — Beauty • Care • Confidence
+
+    <br><br>
+
+    هذا المنتج أداة للعناية الشخصية وليس منتجًا طبيًا.
+
+  </footer>
+
+
+  <!-- MOBILE STICKY BUY BUTTON -->
+  <div class="mobile-buy">
+
+    <div class="mobile-price">
+
+      <small>
+        89 ر.س
+      </small>
+
+      <strong>
+        69 ر.س
+      </strong>
+
+    </div>
+
+
+    <a
+      href="https://wa.me/message/X3AUMIZVL3SGM1"
+      target="_blank"
+      rel="noopener"
+    >
+      🟢 اطلب عبر WhatsApp
+    </a>
+
+  </div>
+
+</body>
+</html>
